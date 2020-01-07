@@ -16,7 +16,7 @@ All the C code inside this repository is written to comply with the latests C st
 
 The below command can be used to compile the source files in to fast native binaries:
 ```bash
-gcc -std=c11 main.c -o output -O2 -march=native
+gcc -std=c11 -lm main.c -o output -O2 -march=native
 ```
 
 ## License
