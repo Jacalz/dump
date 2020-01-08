@@ -26,10 +26,16 @@ python3 main.py
 ```
 
 ### Compile Rust Code
-TODO
+The code written in Rust should be compatible with the latest releases, if not it will be soon. Compile using the command below:
+```bash
+rustc main.rs
+```
 
 ### Compile V code
-TODO
+V is in early stages and can couse old code to stop working. Will try to keep it up to date and working with the latest versions. It can be compiled with the following command:
+```bash
+v -prod main.v
+```
 
 ## License
 All code in this repository is written by [Jacalz](https://github.com/Jacalz) and licensed under GPL-v3.0-or-later.
