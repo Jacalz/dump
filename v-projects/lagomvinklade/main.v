@@ -5,7 +5,7 @@ fn main() {
 	mut c := 0
 
 	for a := 1; a < n+1; a++ {
-		for b := a; b < math.min(a*a+1, n+1); b++ {
+		for b := a; b < int(math.min(a*a+1, n+1)); b++ {
 			c++
 		} 
 	}
