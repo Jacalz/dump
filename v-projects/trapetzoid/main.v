@@ -9,7 +9,7 @@ fn integral(start, end f64, ammount int) f64 {
     // h gives us the length of each divided part.
     h := (end - start) / ammount
 
-    // s is our intital sum of half the start values.
+    // s is our initial sum of half the start values.
     mut s := 0.5 * (f(start) + f(end))
 
     // Loop through the sums of the functions at each trapzoid.
