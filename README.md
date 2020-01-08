@@ -25,5 +25,11 @@ All python code should be compatible with the latest python releases. It can be 
 python3 main.py
 ```
 
+### Compile Rust Code
+TODO
+
+### Compile V code
+TODO
+
 ## License
 All code in this repository is written by [Jacalz](https://github.com/Jacalz) and licensed under GPL-v3.0-or-later.
