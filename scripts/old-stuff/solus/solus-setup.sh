@@ -18,7 +18,7 @@ confirm() {
 echo "Cleaning up file system tools and installing f2fs-tools"
 	# File system tools in Solus are named "progs", "-tools" or "-progs"!
 	sudo eopkg rm -y squashfs-tools resierfsprogs btrfs-progs xfs-progs
-	sudo eopkg it f2fs-tools
+	sudo eopkg it f2fs-tools exfat-utils
 
 confirm "Do you wish to remove printer drivers from the system?" && sudo eopkg rm hplip-drivers system-config-printer gutenprint canon-ufriilt-common -y
 
@@ -33,15 +33,7 @@ echo "Updating system with lates packages"
 	sudo eopkg up -y
 
 echo "Checking for packages that got left behind"
-	sudo eopkg rm goofiboot grub2
 	sudo eopkg rmo -y
-
-echo "Setting up a simple development enviroment"
-	sudo eopkg it -y git atom
-	mkdir ~/GIT/
-	git config --global user.name "user.name"
-	git config --global user.email your@email.com
-	git config --global core.editor nano
 
 echo "Restarting system in order to apply kernel updates"
 	reboot
