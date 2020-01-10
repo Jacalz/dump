@@ -6,10 +6,12 @@ A repository housing various samller projects that are too small for their own r
 ### Compiling C++ Code
 All C++ Code is written to comply with the latest stable specification for C++, which at the moment is C++17.
 
-The below command can be used to compile the source files in to fast native binaries:
+The below command can be used to compile the simple source files in to fast native binaries:
 ```bash
 g++ -std=c++17 main.cpp -o output -O2 -march=native
 ```
+
+More complicated projects will be using meson build files.
 
 ### Compiling C Code
 All the C code inside this repository is written to comply with the latests C standard specification, which for now is C11.
@@ -18,6 +20,7 @@ The below command can be used to compile the source files in to fast native bina
 ```bash
 gcc -std=c11 -lm main.c -o output -O2 -march=native
 ```
+More complicated projects will be using meson build files.
 
 ### Running Python code
 All python code should be compatible with the latest python releases. It can be run by using the following command:
