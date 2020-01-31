@@ -78,12 +78,9 @@ int main() {
         string text = readFromDiary(); 
 
         // Check that inputed text matches input dat in array.
-        if (input[i] == text) {
-            continue;
-        } else {
+        if (input[i] != text) {
             writeToDiary("You have entered an invalid answer! Please try again :)");
             break;
         }
     }
-
 }
