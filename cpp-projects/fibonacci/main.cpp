@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     unsigned int iterations;  
-    cout << "Enter ammount of numbers to print: ";
+    cout << "Enter amount of numbers to print: ";
     cin >> iterations;
 
     // Set intial values for n-1 and n-2 while also initializing the next var.
