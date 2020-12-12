@@ -12,10 +12,12 @@ sudo eopkg it -y vscode golang git micro llvm-clang docker jetbrains-mono gcc-av
 micro -plugin install go
 sudo eopkg it -y -c system.devel mesalib-devel libxrandr-devel libxcursor-devel libxi-devel libxinerama-devel
 go install honnef.co/go/tools/cmd/staticcheck fyne.io/fyne/cmd/fyne github.com/fyne-io/fyne-cross
+go get github.com/Jacalz/wormhole-gui github.com/Jacalz/Sparta
 sudo ln -s ~/go/bin/fyne /usr/bin/fyne
 git config --global user.name "Edit Me"
 git config --global user.email editme@example.com
 git config --global core.editor micro
+mkdir ~/Git
 
 # Manually set up SSH and PGP keys for Git
 
