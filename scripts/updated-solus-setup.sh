@@ -5,10 +5,10 @@ sudo eopkg rmf squashfs-tools resierfsprog dconf-editor hexchat transmission thu
 sudo eopkg up 
 sudo eopkg rmo
 
-# Install everything needed for Go, C/C++ and Fyne development
+# Install everything needed for Go, C/C++, tinyGo and Fyne development
 # Manually add Go, C/C++, clangd, Helium Icon Theme and One Dark Pro extensions to VSCode
 # Manually set font to jetbrains-mono in VSCode
-sudo eopkg it -y vscode golang git micro llvm-clang docker jetbrains-mono
+sudo eopkg it -y vscode golang git micro llvm-clang docker jetbrains-mono gcc-avr avr-libc avrdude
 micro -plugin install go
 sudo eopkg it -y -c system.devel mesalib-devel libxrandr-devel libxcursor-devel libxi-devel libxinerama-devel
 go install honnef.co/go/tools/cmd/staticcheck fyne.io/fyne/cmd/fyne github.com/fyne-io/fyne-cross
