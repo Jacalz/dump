@@ -12,7 +12,7 @@ p10 = [-0.360; 0.800; 0.000]
 p11 = [-0.210; 0.650; 0.364]
 p12 = [0.315; 0.125; 0.546]
 
-# Matrix so that we can tranform it later.
+# Matrix so that we can transform it later.
 M = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12]
 
 
