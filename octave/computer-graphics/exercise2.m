@@ -23,4 +23,4 @@ grid on # Turn on the grid for our plot.
 plot([ M(1, 1) M(1, 2)], [M(2, 1) M(2, 2) ])
 plot([ M(1, 2) M(1, 3)], [M(2, 2) M(2, 3) ])
 plot([ M(1, 3) M(1, 4)], [M(2, 3) M(2, 4) ])
-plot([ M(1, 1) M(1, 4)], [M(2, 2) M(2, 4) ])
+plot([ M(1, 4) M(1, 1)], [M(2, 4) M(2, 1) ])
