@@ -15,11 +15,27 @@ p12 = [0.315; 0.125; 0.546]
 # Matrix so that we can transform it later.
 M = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12]
 
+# Scale by 1.8 in the x-direction, 0.5 in the y-direction
+# and 3.0 in the z-direction.
+T = [1.8, 0, 0; 0, 0.5, 0; 0, 0, 3.0]
+#M = T * M
 
-# Transform matrix.
-T =  [1, 0, 0; 0, cos(pi/2), -sin(pi/2); 0, sin(pi/2), cos(pi/2)]
-M = T * M
+# Translate by 1.2 in the x-direction, 0.4 in the y-direction
+# and 1.7 in the z-direction.
+u = [1.2; 0.4; 1.7]
+#M = M + u # Fake matrix addition with vector.
 
+# Rotate 30 degrees around the x-axis, -70 degrees around the
+# y-axis and -27 degrees around the z-axis.
+a = deg2rad(30)
+R1 = [1, 0, 0; 0, cos(a), -sin(a); 0, sin(a), cos(a)]
+
+b = deg2rad(-70)
+R2 = [cos(b), 0, sin(b); 0, 1, 0; -sin(b), 0, cos(b)]
+
+c = deg2rad(-27)
+R3 = [cos(c), -sin(c), 0; sin(c), cos(c), 0; 0, 0, 1]
+M = R3 * R2 * R1 * M
 
 # Define plot settings.
 hold on # Plot in same plot.
