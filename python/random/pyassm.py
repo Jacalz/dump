@@ -12,8 +12,8 @@ def eval_pyassm(prog: list[list]):
     # ord('A') is 65. Convert the register name to slice index.
     reg_to_index = lambda reg: ord(reg) - ord("A")
 
-    # Keep track of labels that we can jump to.
-    subroutines = []
+    # Keep a stack of return adresses for jump instructions.
+    return_addresses = []
 
     index = 0
     while index < len(prog):
@@ -22,15 +22,14 @@ def eval_pyassm(prog: list[list]):
         name = current[0]
         if name == "JSR":
             # Save the state where we left off.
-            subroutines.append(index + 1)
+            return_addresses.append(index + 1)
 
             # Jump to the position.
             number = current[1]
             index = number
             continue
-        elif name == "RET" and len(subroutines) > 0:
-            index = subroutines[-1]
-            subroutines = subroutines[:-1]
+        elif name == "RET" and len(return_addresses) > 0:
+            index = return_addresses.pop()
             continue
         elif name == "NOP":
             index += 1
